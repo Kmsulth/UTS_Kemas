@@ -17,7 +17,7 @@ class Aksi{
 
   function tampilkan(){ 
   $hasil=[];       
-    $data = $this->mysqli->query("SELECT * FROM tbl_produk");
+    $data = $this->mysqli->query("SELECT * FROM tbl_produk WHERE stok > 0 ");
     while($amb = mysqli_fetch_assoc($data)){
       $hasil[] = $amb;
     }    
